@@ -233,35 +233,55 @@
 
 /* ── Hide case mode ── */
 
-.phone-shell-wrap[data-hide-case="1"] {
-  --phone-case-padding: 0px;
-  --phone-case-border-size: 0px;
-  --phone-frame-size: 0px;
-  --phone-frame-radius: var(--phone-screen-radius);
-  --phone-case-radius: var(--phone-screen-radius);
+.phone-shell-wrap[data-hide-case="1"],
+@media (max-width: 768px) {
+  .phone-shell-wrap {
+    --phone-case-padding: 0px !important;
+    --phone-case-border-size: 0px !important;
+    --phone-frame-size: 0px !important;
+    --phone-frame-radius: 0px !important;
+    --phone-case-radius: 0px !important;
+    --phone-screen-radius: 0px !important;
+    width: 100vw !important;
+  }
 }
 
-.phone-shell-wrap[data-hide-case="1"] .phone-case {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
+.phone-shell-wrap[data-hide-case="1"] .phone-case,
+@media (max-width: 768px) {
+  .phone-case {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
 }
 
 .phone-shell-wrap[data-hide-case="1"] .phone-case::before,
-.phone-shell-wrap[data-hide-case="1"] .phone-case::after {
-  display: none;
+.phone-shell-wrap[data-hide-case="1"] .phone-case::after,
+@media (max-width: 768px) {
+  .phone-case::before,
+  .phone-case::after {
+    display: none !important;
+  }
 }
 
-.phone-shell-wrap[data-hide-case="1"] .phone-frame {
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
+.phone-shell-wrap[data-hide-case="1"] .phone-frame,
+@media (max-width: 768px) {
+  .phone-frame {
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
 }
 
 .phone-shell-wrap[data-hide-case="1"] .phone-frame::before,
-.phone-shell-wrap[data-hide-case="1"] .phone-frame::after {
-  display: none;
+.phone-shell-wrap[data-hide-case="1"] .phone-frame::after,
+@media (max-width: 768px) {
+  .phone-frame::before,
+  .phone-frame::after {
+    display: none !important;
+  }
 }
 
 /* ── Desktop workspace ── */
