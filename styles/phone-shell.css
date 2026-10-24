@@ -240,9 +240,8 @@
   overflow: visible;
 }
 
-/* ── Hide case mode ── */
+/* ── Hide case mode & Mobile Fullscreen Auto-Fit ── */
 
-.phone-shell-wrap[data-hide-case="1"],
 @media (max-width: 768px) {
   .phone-shell-wrap {
     --phone-case-padding: 0px !important;
@@ -251,42 +250,30 @@
     --phone-frame-radius: 0px !important;
     --phone-case-radius: 0px !important;
     --phone-screen-radius: 0px !important;
+    --phone-screen-width: 100vw !important;
+    --phone-screen-height: 100vh !important;
+    --phone-total-width: 100vw !important;
     width: 100vw !important;
-  }
-}
-
-.phone-shell-wrap[data-hide-case="1"] .phone-case,
-@media (max-width: 768px) {
-  .phone-case {
+    margin: 0 !important;
     padding: 0 !important;
-    border: 0 !important;
+  }
+
+  .phone-case,
+  .phone-frame,
+  .phone-shell {
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
     background: transparent !important;
     box-shadow: none !important;
-    width: 100% !important;
   }
-}
 
-.phone-shell-wrap[data-hide-case="1"] .phone-case::before,
-.phone-shell-wrap[data-hide-case="1"] .phone-case::after,
-@media (max-width: 768px) {
   .phone-case::before,
-  .phone-case::after {
-    display: none !important;
-  }
-}
-
-.phone-shell-wrap[data-hide-case="1"] .phone-frame,
-@media (max-width: 768px) {
-  .phone-frame {
-    padding: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-}
-
-.phone-shell-wrap[data-hide-case="1"] .phone-frame::before,
-.phone-shell-wrap[data-hide-case="1"] .phone-frame::after,
-@media (max-width: 768px) {
+  .phone-case::after,
   .phone-frame::before,
   .phone-frame::after {
     display: none !important;
