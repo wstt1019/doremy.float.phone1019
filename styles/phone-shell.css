@@ -131,6 +131,15 @@
   isolation: isolate;
 }
 
+@media (max-width: 768px) {
+  .phone-shell {
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+  }
+}
+
 .phone-shell::before {
   content: "";
   position: absolute;
